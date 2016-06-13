@@ -1,7 +1,7 @@
 'use strict';
 
 describe('djList', function(){
-  beforeEach(module(djListApp));
+  beforeEach(module('djList'));
 
   describe('DjListController', function(){
     it('should create a songs model with 3 songs', inject(function($componentController){
