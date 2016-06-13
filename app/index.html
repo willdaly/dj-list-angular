@@ -15,19 +15,14 @@
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body ng-controller="DjListController">
-  <ul ng-repeat="song in songs">
-    <li>
-      <span>{{song.title}}<span>
-      <p>{{song.artist}}</p>
-    </li>
-  </ul>
-  <p>1+2={{1+2}}</p>
+<body>
+
+  <dj-list></dj-list>
+
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="dj-list.component.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
