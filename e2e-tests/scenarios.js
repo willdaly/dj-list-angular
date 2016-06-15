@@ -8,19 +8,19 @@ describe('DjList Application', function() {
     it('should filter the dj list as a user types into the search box', function(){
       var djList = element.all(by.repeater('song in $ctrl.songs'));
       var query = element(by.model('$ctrl.query'));
-      expect(djList.count()).toBe(3);
-      query.sendKeys('Johnny');
-      expect(djList.count()).toBe(1);
+      expect(djList.count()).toBe(6935);
+      query.sendKeys('Brainwash');
+      expect(djList.count()).toBe(2);
       query.clear();
-      query.sendKeys("That's all");
+      query.sendKeys("King of Demos");
       expect(djList.count()).toBe(1);
     }); //search
 
     it('should be possible to control song order via the drop-down menu', function(){
       var queryField = element(by.model('$ctrl.query'));
       var orderSelect = element(by.model('$ctrl.orderProp'));
-      var nameOption = orderSelect.element(by.css)('option[value="bpm"]');
-      var songBPMColumn = element.all(by.repeater('phone in $ctrl.songs').column('song.bpm'));
+      var nameOption = orderSelect.element(by.css('option[value="bpm"]'));
+      var songBPMColumn = element.all(by.repeater('song in $ctrl.songs').column('song.bpm'));
 
       function getBPMs () {
         return songBPMColumn.map(function(elem){
@@ -28,9 +28,13 @@ describe('DjList Application', function() {
         });
       }
 
-      queryField.sendKeys('34');
+      queryField.sendKeys('Brainwash 2000');
 
-      expect(getBPMs()).toEqual(['34']);
+      expect(getBPMs()).toEqual(['87', '88']);
+
+      nameOption.click();
+
+      expect(getBPMs()).toEqual(['87', '88']);
     });
 
 
