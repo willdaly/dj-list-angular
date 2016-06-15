@@ -3,13 +3,31 @@
     <div class="col-md-2">
       Search <input ng-model="$ctrl.query" />
     </div>
-    <div class="cold-md-10">
-      <ul class="songs">
-        <li ng-repeat="song in $ctrl.songs | filter:$ctrl.query">
-          <span>{{song.title}}<span>
-          <p>{{song.artist}}</p>
-        </li>
-      </ul>
+    <div class="col-sm-9">
+      <table class="table table-bordered table-hover table-condensed" id="selectable">
+        <thead>
+          <tr>
+            <th>order</th>
+            <th>bpm</th>
+            <th>key</th>
+            <th>song</th>
+            <th>artist</th>
+            <th>album</th>
+            <th>genre</th>
+          </tr>
+        </thead>
+        <tbody id="searchResults">
+          <tr ng-repeat="song in $ctrl.songs | filter:$ctrl.query">
+            <td></td>
+            <td>{{song.bpm}}</td>
+            <td>{{song.key}}</td>
+            <td>{{song.title}}</td>
+            <td>{{song.artist}}</td>
+            <td>{{song.album}}</td>
+            <td>{{song.genre}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
