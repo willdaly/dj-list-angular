@@ -1,7 +1,5 @@
 'use strict';
 
-/* https://github.com/angular/protractor/blob/master/docs/toc.md */
-
 describe('DjList Application', function() {
   describe('djList', function(){
     beforeEach(function(){
@@ -16,6 +14,25 @@ describe('DjList Application', function() {
       query.clear();
       query.sendKeys("That's all");
       expect(djList.count()).toBe(1);
+    }); //search
+
+    it('should be possible to control song order via the drop-down menu', function(){
+      var queryField = element(by.model('$ctrl.query'));
+      var orderSelect = element(by.model('$ctrl.orderProp'));
+      var nameOption = orderSelect.element(by.css)('option[value="bpm"]');
+      var songBPMColumn = element.all(by.repeater('phone in $ctrl.songs').column('song.bpm'));
+
+      function getBPMs () {
+        return songBPMColumn.map(function(elem){
+          return elem.getText();
+        });
+      }
+
+      queryField.sendKeys('34');
+
+      expect(getBPMs()).toEqual(['34']);
     });
-  });
+
+
+  }); //describe djList
 });
