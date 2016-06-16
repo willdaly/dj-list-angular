@@ -39,4 +39,13 @@ describe('DjList Application', function() {
 
 
   }); //describe djList
+
+  // describe('View: playlists', function(){
+  //   beforeEach(function(){
+  //     browser.get('index.html#!/playlists');
+  //   });
+  //   it('should display the playlist index page', function(){
+  //     expect(element(by.binding('#ctrl.playlistId')).getText()).toBe('whatever');
+  //   });
+  // }); //playlists
 });
