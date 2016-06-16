@@ -1,5 +1,7 @@
 'use strict';
 
 angular.module('djlistApp', [
-  'djList'
+  'ngRoute',
+  'djList',
+  'playList'
 ]);

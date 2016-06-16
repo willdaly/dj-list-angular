@@ -23,7 +23,6 @@
       <table class="table table-bordered table-hover table-condensed" id="selectable">
         <thead>
           <tr>
-            <th>order</th>
             <th>bpm</th>
             <th>key</th>
             <th>song</th>
@@ -34,7 +33,6 @@
         </thead>
         <tbody id="searchResults">
           <tr ng-repeat="song in $ctrl.songs | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-            <td></td>
             <td>{{song.bpm}}</td>
             <td>{{song.key}}</td>
             <td>{{song.title}}</td>

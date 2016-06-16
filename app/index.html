@@ -16,14 +16,16 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-
-  <dj-list></dj-list>
+  <div ng-view></div>
 
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.module.js"></script>
+  <script src="app.config.js"></script>
   <script src="dj-list/dj-list.module.js"></script>
   <script src="dj-list/dj-list.component.js"></script>
+  <script src="dj-list/play-list.module.js"></script>
+  <script src="dj-list/play-list.component.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
