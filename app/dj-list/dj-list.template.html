@@ -36,7 +36,7 @@
           </tr>
         </thead>
         <tbody id="searchResults">
-          <tr ng-repeat="song in $ctrl.songs | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+          <tr ng-repeat="song in $ctrl.songs | filter:$ctrl.query | bpm:$ctrl.bpmSlider.min:$ctrl.bpmSlider.max | orderBy:$ctrl.orderProp">
             <td></td>
             <td>{{song.bpm}}</td>
             <td>{{song.key}}</td>

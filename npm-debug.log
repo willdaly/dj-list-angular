@@ -30,7 +30,7 @@
 18 verbose stack     at maybeClose (internal/child_process.js:852:16)
 18 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
 19 verbose pkgid angular-seed@0.0.0
-20 verbose cwd /Users/willdaly/Code/dj-list-angular/app/songs
+20 verbose cwd /Users/willdaly/Code/dj-list-angular
 21 error Darwin 15.5.0
 22 error argv "/usr/local/Cellar/node/6.2.1/bin/node" "/usr/local/bin/npm" "run" "protractor"
 23 error node v6.2.1
