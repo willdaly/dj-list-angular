@@ -1,5 +1,3 @@
 'use strict';
 
-angular.module('djlistApp', [
-  'djList'
-]);
+angular.module('djlistApp', ['djList']);

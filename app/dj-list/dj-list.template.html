@@ -5,7 +5,10 @@
         Search:
         <input ng-model="$ctrl.query" />
       </p>
-
+      <rzslider
+        rz-slider-model="$ctrl.bpmSlider.min"
+        rz-slider-high="$ctrl.bpmSlider.max"
+        rz-slider-options="$ctrl.bpmSlider.options"></rzslider>
       <p>
         Sort by:
         <select ng-model="$ctrl.orderProp">
