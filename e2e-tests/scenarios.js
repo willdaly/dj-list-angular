@@ -35,8 +35,16 @@ describe('DjList Application', function() {
       nameOption.click();
 
       expect(getBPMs()).toEqual(['87', '88']);
-    });
+    }); //songOrder
 
+    it('should filter the results between the range slider values', function(){
+        var lowSlider = element(by.css('.rz-pointer-min'));
+        browser.actions().dragAndDrop(lowSlider, '50').mouseUp().perform(); //Failed: location.getRawId is not a function
+        var highSlider = element(by.css('.rz-pointer-max'));
+        browser.actions().dragAndDrop(highSlider, '52').mouseUp().perform();
+        var ctrl = $componentController('djList');
+        expect(ctrl.songs.length).toBe(12);
+      });//filter bpm
 
   }); //describe djList
 

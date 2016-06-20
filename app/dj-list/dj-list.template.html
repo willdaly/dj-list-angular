@@ -5,7 +5,10 @@
         Search:
         <input ng-model="$ctrl.query" />
       </p>
-
+      <rzslider
+        rz-slider-model="$ctrl.bpmSlider.min"
+        rz-slider-high="$ctrl.bpmSlider.max"
+        rz-slider-options="$ctrl.bpmSlider.options"></rzslider>
       <p>
         Sort by:
         <select ng-model="$ctrl.orderProp">
@@ -32,7 +35,7 @@
           </tr>
         </thead>
         <tbody id="searchResults">
-          <tr ng-repeat="song in $ctrl.songs | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+          <tr ng-repeat="song in $ctrl.songs | filter:$ctrl.query | bpm:$ctrl.bpmSlider.min:$ctrl.bpmSlider.max | orderBy:$ctrl.orderProp">
             <td>{{song.bpm}}</td>
             <td>{{song.key}}</td>
             <td>{{song.title}}</td>
